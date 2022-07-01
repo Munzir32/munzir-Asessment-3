@@ -1,46 +1,16 @@
-﻿// See https://aka.ms/new-console-template for more information
-/int a; int b;
-            int min; int max;
-            Console.WriteLine("Enter the first integer: ");
-            a = int.Parse(Console.ReadLine());
-            Console.WriteLine(" Enter the second integer: ");
-            b = int.Parse(Console.ReadLine());
 
-            max = (a > b) ? a : b;
-            min = (a < b) ? b : b;
-
-            if (a!=b){
-                Console.WriteLine("The minimum number is: " + min);
-                Console.WriteLine("The maximum number is: " + max + "\n");
-            }         
-            else
+            Console.WriteLine("--------------------Question1 ---------------------");
+        Console.Write("enter a number: ");
+        int integer1 = Convert.ToInt32(Console.ReadLine());
+        Console.Write("enter second number: ");
+        int integer2 = Convert.ToInt32(Console.ReadLine());
+        while (integer1 < integer2)
+        {
+            integer1++;
+            if (integer1 % 5 == 0)
             {
-                Console.WriteLine("The numbers are both equal therefore there are 0 numbers in between them that are divisible by 5 and results to zero.");
+                Console.WriteLine(integer1);
             }
-
-            int arrayspaces = 0; 
-            for (int i = min; i <= max; i++)
-            {
-                if (i % 5 == 0)
-                {
-                    arrayspaces++;
-                }
-            }
-
-            int counter = 0; int[] arr = new int[arrayspaces]; 
-            for (int i = min; i <= max; i++)
-            {
-                if (i % 5 == 0)
-                {
-                    arr[counter] = i;
-                    counter++;
-                }
-            }
-                        
-            Console.WriteLine("[{0}]", string.Join(", ", arr));            
-            Console.WriteLine("There are {0} numbers that are divisible by 5 and results to zero between the min and max number.", counter);
-            Console.ReadLine();
-
 
             Console.WriteLine("......2.........");
            int a = 0,b=1,c= 0;
